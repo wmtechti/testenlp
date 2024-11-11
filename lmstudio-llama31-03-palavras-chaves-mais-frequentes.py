@@ -51,7 +51,6 @@ for texto in df[nmtexto]:
 #palavras_chave gerada
 #print("\npalavras chaves geradas:\n", palavras_chave)
 
-
 # Mostrar as palavras-chave mais comuns
 print("\npalavras chaves mais comum:")
 contagem = Counter(palavras_chave)

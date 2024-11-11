@@ -68,13 +68,4 @@ print("frequencia...")
 frequencia = df['processed_text'].str.split().explode().value_counts()
 print(frequencia.nlargest(10))
 
-print("treinar modelo...")
-# Treinar o modelo
-vectorizer = TfidfVectorizer()
-X_train, X_test, y_train, y_test = train_test_split(df['processed_text'], df['categoria'], test_size=0.2, random_state=42)
-modelo = MultinomialNB()
-modelo.fit(vectorizer.fit_transform(X_train), y_train)
 
-# Avaliar o modelo
-acuracia = modelo.score(vectorizer.transform(X_test), y_test)
-print(f'Acurácia: {acuracia:.2f}')
